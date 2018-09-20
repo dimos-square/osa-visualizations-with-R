@@ -6,5 +6,5 @@ Get data from [Open Source Api](https://open-source-api.herokuapp.com/) and crea
 * [functional-languages.R](code/functional-languages.R)
 ![alt text](images/functional_langs.png "Functional Languages")
 
-* [hireability-for-hire.R](code/hireability-for-hire.R)
+* [hireability-rate.R](code/hireability-rate.R)
 ![alt text](images/hireability.png "Hireability Rate")
