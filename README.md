@@ -8,3 +8,6 @@ Get data from [Open Source Api](https://open-source-api.herokuapp.com/) and crea
 
 * [hireability-rate.R](code/hireability-rate.R)
 ![alt text](images/hireability.png "Hireability Rate")
+
+* [issues.R](code/issues.R)
+    ![alt text](images/issues.png "Issues")
