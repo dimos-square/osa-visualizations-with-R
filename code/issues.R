@@ -45,6 +45,6 @@ daily_issues <- gather(data = df, key = Action, value = Issues, -hour) %>%
   mutate(Action = replace(Action, Action == "issues_reopened", "Reopen"))
 
 ggplot(daily_issues, aes(x = hour, y = Issues, group = Action)) +
-  geom_area(aes(color = Action, fill = Action), alpha = 0.5) +
+geom_line(aes(color = Action), size = 1) +
   labs(x = "Hour", y = "", title = "Issues") +
   theme_minimal()
