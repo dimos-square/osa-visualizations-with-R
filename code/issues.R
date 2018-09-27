@@ -19,14 +19,14 @@ for (h in sprintf("%02d", 23:0)){
   hour <- paste(day, h, sep = "-")
 
   results <- run_query(
-  token,
-  hour_from = hour,
-  hour_to = hour,
-  dimensions = list("actor_type"),
-  metrics = list("issue_comments", "issues_closed", "issues_opened" , "issues_reopened"),
-  filters = list(
-  "actor_type" = list("User")
-  )
+    token,
+    hour_from = hour,
+    hour_to = hour,
+    dimensions = list("actor_type"),
+    metrics = list("issue_comments", "issues_closed", "issues_opened" , "issues_reopened"),
+    filters = list(
+      "actor_type" = list("User")
+    )
   )
 
   df <- results %>%
@@ -45,6 +45,6 @@ daily_issues <- gather(data = df, key = Action, value = Issues, -hour) %>%
   mutate(Action = replace(Action, Action == "issues_reopened", "Reopen"))
 
 ggplot(daily_issues, aes(x = hour, y = Issues, group = Action)) +
-geom_line(aes(color = Action), size = 1) +
+  geom_line(aes(color = Action), size = 1) +
   labs(x = "Hour", y = "", title = "Issues") +
   theme_minimal()

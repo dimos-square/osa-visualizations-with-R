@@ -34,7 +34,6 @@ functional_langs <- gather(data = df, key = Action, value = n, -repo_language) %
   mutate(Action = replace(Action, Action == "star_actors", "Star")) %>%
   mutate(Action = replace(Action, Action == "fork_actors", "Fork"))
 
-ggplot(data = functional_langs,
-       mapping = aes(x = repo_language, y = n, fill = Action)) +
+ggplot(data = functional_langs, mapping = aes(x = repo_language, y = n, fill = Action)) +
   geom_bar(stat = "identity", position = position_dodge()) +
   labs(x = "Language", y = "Users", title = "Functional Languages")
