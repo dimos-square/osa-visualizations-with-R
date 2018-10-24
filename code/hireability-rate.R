@@ -19,7 +19,9 @@ df <- run_query(
   hour_to,
   dimensions = list("actor_country", "actor_is_hireable"),
   metrics = list("push_actors"),
-  filters = 
+  filters = list(
+      "actor_type" = list("User")
+    )
 )
 
 df_without_na <- df %>%
