@@ -16,7 +16,7 @@ run_query <- function(token, hour_from, hour_to, dimensions, metrics, filters = 
   if (!is.null(limit)) {
     query[["limit"]] <- limit
   }
-  results <- POST("https://open-source-api.herokuapp.com/",
+  results <- POST("https://dev-source.herokuapp.com/",
        body = query,
        encode = "json",
        add_headers(Authorization = auth))

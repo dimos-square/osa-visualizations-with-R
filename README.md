@@ -1,4 +1,4 @@
-Get data from [Open Source Api](https://open-source-api.herokuapp.com/) and create visualizations with R
+Get data from [DevSource](https://dev-source.herokuapp.com/) and create visualizations with R
 
 * [active-organizations.R](code/active-organizations.R)
 ![alt text](images/active_orgs.png "Active Organizations")
